@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18sdp"
+            android:text="Hello World"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_odd"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"/>
+
+            <com.engai.demo.widget.WrappedGridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_odd"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/_1sdp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/_1sdp"
+                android:numColumns="2"
+                android:columnWidth="@dimen/_5sdp">
+
+            </com.engai.demo.widget.WrappedGridView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

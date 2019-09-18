@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_height="match_parent">
+
+    <com.engai.demo.widget.SquareImageView
+        android:id="@+id/ivgridImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_launcher_background"
+        android:adjustViewBounds="true"/>
+
+</LinearLayout>
