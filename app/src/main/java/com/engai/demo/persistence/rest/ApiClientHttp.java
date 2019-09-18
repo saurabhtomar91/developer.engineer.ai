@@ -9,6 +9,9 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
+/*
+ For connecting to internet we are using AsyncHttp Client
+ */
 public class ApiClientHttp {
 
     private static final String BASE_URL = App.getResource().getString(R.string.engai);

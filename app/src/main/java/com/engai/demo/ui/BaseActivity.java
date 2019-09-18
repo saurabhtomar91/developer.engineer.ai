@@ -19,7 +19,7 @@ import com.engai.demo.R;
 import java.util.Vector;
 
 /**
- * Created by saurabhtomar on 9/21/17.
+ * Created by saurabhtomar.
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -38,8 +38,14 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onPostCreate(savedInstanceState);
     }
 
+    /*
+    ProgressBar Vector
+     */
     Vector<ProgressDialog> progress = new Vector<>();
 
+    /*
+    Show Progressbar dialog
+     */
     public void showDialog(String message, boolean canCancelled) {
         try {
             ProgressDialog dialog = new ProgressDialog(this);
@@ -57,10 +63,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (App.isNetworkConnected()) {
             showDialog(getString(R.string.str_loading), true);
         } else {
-            //App.customShowDialog("No Internet Connection", "Please connect to internet for accessing server", BaseActivity.this);
+            App.showToast(BaseActivity.this, "Please connect to internet for accessing server");
             return;
         }
     }
+
 
     public void dismissProgress() {
         try {

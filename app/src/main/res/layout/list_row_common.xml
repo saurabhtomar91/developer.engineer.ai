@@ -9,12 +9,11 @@
         android:layout_margin="@dimen/_8sdp"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvUserName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_18sdp"
-            android:text="Hello World"/>
+        <include
+            android:id="@+id/user_header"
+            layout="@layout/include_userheader_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -24,7 +23,7 @@
                 android:id="@+id/iv_odd"
                 android:visibility="visible"
                 android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_margin="@dimen/_5sdp"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
                 android:adjustViewBounds="true"/>
@@ -48,5 +47,10 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray"/>
 
 </RelativeLayout>

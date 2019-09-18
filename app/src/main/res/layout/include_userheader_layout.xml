@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/_40sdp"
     android:layout_alignParentTop="true"
-    android:background="@android:color/darker_gray"
+    android:layout_marginLeft="@dimen/_8sdp"
+    android:layout_marginRight="@dimen/_8sdp"
     android:elevation="@dimen/_4sdp"
     android:minHeight="@dimen/_50sdp"
     android:maxHeight="@dimen/_50sdp">
@@ -14,12 +15,19 @@
             android:id="@+id/iv_logo"
             android:layout_width="@dimen/_35sdp"
             android:layout_height="@dimen/_35sdp"
-            android:padding="@dimen/_5sdp"
             android:layout_centerVertical="true"
             android:layout_margin="@dimen/_3sdp"
             android:src="@drawable/ic_profile"
             app:civ_border_color="@android:color/white"
             app:civ_border_width="@dimen/_1sdp" />
 
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_logo"
+        android:textSize="@dimen/_18sdp"
+        android:text="Hello World"/>
 
 </RelativeLayout>

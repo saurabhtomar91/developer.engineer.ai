@@ -4,6 +4,10 @@ import android.content.Context;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 
+/*
+ Created By Saurabh Tomar
+ */
+
 public class SquareImageView extends AppCompatImageView {
 
     public SquareImageView(Context context) {

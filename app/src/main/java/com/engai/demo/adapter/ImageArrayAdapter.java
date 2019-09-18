@@ -21,9 +21,7 @@ public class ImageArrayAdapter extends BaseAdapter {
     private MainActivity parentActivity;
     ViewHolder holder = null;
     private List<String> items = new ArrayList<>();
-    //private ArrayList<Product> itemsInApp = new ArrayList<>();
     Context mContext;
-    private float qntyValue = 1f;
 
 
     public ImageArrayAdapter(Context context, List<String> items) {
@@ -71,7 +69,7 @@ public class ImageArrayAdapter extends BaseAdapter {
 
         Glide.with(parentActivity)
                 .load(itemDetails)
-                .placeholder(R.drawable.ic_profile)
+                .placeholder(R.drawable.image_placeholder)
                 .into(holder.itemImage);
 
 

@@ -24,8 +24,8 @@ import cz.msebera.android.httpclient.Header;
 public class MainActivity extends BaseActivity {
 
     private int offsetValue = 0;  // offset value
-    private UserAdapter adapter;
-    ArrayList<UserModel> userModelArrayList;
+    private UserAdapter adapter;  // UserAdapter
+    ArrayList<UserModel> userModelArrayList; // UserArraylist
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private EndlessScrollRecyclListener endlessScrollRecyclListener;
@@ -54,7 +54,7 @@ public class MainActivity extends BaseActivity {
         endlessScrollRecyclListener = new EndlessScrollRecyclListener(linearLayoutManager) {
             @Override
             public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
-                loadMoreApi(offsetValue);
+                loadMoreApi(totalItemsCount);
             }
         };
         // Adds the scroll listener to RecyclerView
@@ -80,11 +80,15 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        
         fetchApi(offsetValue);
-
     }
 
 
+    /*
+    FetchApi from the server to populate the recyclerview
+    @param int offsetValue for fetching the data from server and populate it on Ui
+     */
     public void fetchApi(int offsetValue) {
         try {
             showProgress();
@@ -129,10 +133,14 @@ public class MainActivity extends BaseActivity {
     }
 
 
+
+    /*
+    Load More Content based on scroll of recyclerview
+    @param offsetValue from Pagination Listener
+     */
     public void loadMoreApi(int offsetValue) {
         try {
             if (hasMore) {
-                offsetValue+=10;
                 showProgress();
                 RequestParams requestParams = new RequestParams();
                 requestParams.put("limit", limit);
