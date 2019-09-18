@@ -80,7 +80,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        
+
         fetchApi(offsetValue);
     }
 
